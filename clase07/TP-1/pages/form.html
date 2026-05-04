@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga de DNI</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-brand">AR</a>
+        <ul class="navbar-links">
+            <li><a href="../index.html">Sobre mí</a></li>
+            <li><a href="#" class="active">Carga DNI</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="upload-wrapper">
+
+            <div class="hero-text" style="margin-bottom: 40px;">
+                <h1>Carga de documento</h1>
+                <p class="subtitle">Registro de datos del DNI</p>
+                <p>Completá los campos con la información del documento. La foto se guardará en la carpeta <code>./media</code>.</p>
+            </div>
+
+            <form id="dniForm" novalidate>
+
+                <!-- Datos personales -->
+                <p class="section-title">Datos personales</p>
+
+                <div class="form-grid">
+                    <div class="field" id="field-nombre">
+                        <label for="nombre">Nombre <span class="required">*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Martín" autocomplete="given-name">
+                        <span class="field-error">Ingresá el nombre</span>
+                    </div>
+
+                    <div class="field" id="field-apellido">
+                        <label for="apellido">Apellido <span class="required">*</span></label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ej: García" autocomplete="family-name">
+                        <span class="field-error">Ingresá el apellido</span>
+                    </div>
+
+                    <div class="field" id="field-documento">
+                        <label for="documento">Número de documento <span class="required">*</span></label>
+                        <input type="text" id="documento" name="documento" placeholder="Ej: 38.456.789" maxlength="10" inputmode="numeric">
+                        <span class="field-error">Ingresá un número de documento válido</span>
+                    </div>
+                </div>
+
+                <!-- Domicilio -->
+                <div class="section-divider">
+                    <p class="section-title">Domicilio</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="field full" id="field-direccion">
+                        <label for="direccion">Dirección <span class="required">*</span></label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Ej: Av. San Martín 1234, Piso 2 Dto. A" autocomplete="street-address">
+                        <span class="field-error">Ingresá la dirección</span>
+                    </div>
+
+                    <div class="field" id="field-localidad">
+                        <label for="localidad">Localidad <span class="required">*</span></label>
+                        <input type="text" id="localidad" name="localidad" placeholder="Ej: San Miguel de Tucumán" autocomplete="address-level2">
+                        <span class="field-error">Ingresá la localidad</span>
+                    </div>
+                </div>
+
+                <!-- Foto del DNI -->
+                <div class="section-divider">
+                    <p class="section-title">Foto del DNI</p>
+                </div>
+
+                <div class="field full" id="field-foto">
+                    <label>Foto del documento <span class="required">*</span></label>
+                    <div class="photo-drop" id="dropZone">
+                        <input type="file" id="fotoInput" name="foto" accept="image/jpeg,image/png,image/webp,image/heic">
+                        <div class="drop-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <polyline points="21 15 16 10 5 21"/>
+                            </svg>
+                        </div>
+                        <span class="drop-label">Arrastrá la foto acá o <span class="drop-link">seleccioná un archivo</span></span>
+                        <span class="drop-sub">JPG, PNG o WEBP · Máx. 10 MB</span>
+                    </div>
+                    <div class="photo-preview" id="photoPreview">
+                        <img id="previewImg" src="" alt="Vista previa del DNI">
+                        <div class="photo-name" id="photoName"></div>
+                        <button type="button" class="remove-photo" id="removePhoto" title="Quitar foto">×</button>
+                    </div>
+                    <span class="field-error">Agregá una foto del documento</span>
+                </div>
+
+                <!-- Acciones -->
+                <div class="form-actions">
+                    <button type="submit" class="btn" id="submitBtn">
+                        <span class="spinner"></span>
+                        <span class="btn-text">Guardar registro</span>
+                    </button>
+                    <button type="button" class="btn-ghost" id="resetBtn">Limpiar</button>
+                </div>
+
+                <div class="toast" id="toast"></div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Agustin Rodriguez</p>
+    </footer>
+
+    <script src="../js/formulario_dni.js"></script>
+
+</body>
+</html>
