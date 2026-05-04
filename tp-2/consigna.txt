@@ -1,0 +1,26 @@
+
+Apellido Nota Faltas
+Albarracion 10 10
+Amado 1 9
+Andrada 8 8
+Banegas 2 7 
+Bascari 9 6
+Bravo 3 5
+Calderon 7 4
+Carrizo 4 3
+Chazarreta 6 2 
+Diarte 8 1
+Diaz 9 9
+Diez 10 10
+
+Consigna:
+Agregar al array:
+Apellido Avellaneda con nota 7 y 2 faltas 
+Apellido Brizeño con nota 9 y 9 faltas
+Apellido Cordoba con nota 6 y 3 faltas 
+Agregar Geronimo con nota 2 y 9 faltas
+
+Se quiere saber el promedio de notas del curso
+Saber si cada alumno aprueba >7
+Saber si queda libre con >6 faltas
+Ingresar los datos por teclado 
