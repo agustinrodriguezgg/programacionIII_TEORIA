@@ -1,0 +1,172 @@
+/* ===========================
+RESET Y BASE
+=========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1a1a1a;
+  padding: 2rem 1rem;
+}
+
+/* ===========================
+CONTENEDOR PRINCIPAL
+=========================== */
+.contenedor {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* ===========================
+FORMULARIO
+=========================== */
+.formulario {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  font-size: 13px;
+  color: #666;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  outline: none;
+}
+
+input:focus {
+  border-color: #666;
+}
+
+button {
+  padding: 10px;
+  font-size: 15px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+#msgError {
+  font-size: 13px;
+  color: #c0392b;
+  min-height: 18px;
+}
+
+/* ===========================
+LISTA DE PRODUCTOS
+=========================== */
+#listaProductos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.item-producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.item-producto:hover {
+  background-color: #fdecea;
+  border-color: #e74c3c;
+}
+
+.item-nombre {
+  font-size: 15px;
+}
+
+.item-derecha {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.item-precio {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.item-eliminar {
+  font-size: 13px;
+  color: #999;
+}
+
+/* ===========================
+RESUMEN / TOTAL
+=========================== */
+.resumen {
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.resumen span:first-child {
+  font-size: 14px;
+  color: #555;
+}
+
+.resumen span:nth-child(2) {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.ayuda {
+  width: 100%;
+  font-size: 12px;
+  color: #888;
+}
+
+/* Clase utilitaria para ocultar elementos */
+.oculto {
+  display: none;
+}
